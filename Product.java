@@ -17,6 +17,7 @@ import java.util.Date;
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String desc;
@@ -28,4 +29,9 @@ public class Product {
     private Date releaseDate;
     private boolean available;
     private int quantity;
+
+    private String imageName;
+    private String imageType;
+    @Lob
+    private byte[] imageData;
 }
